@@ -13,6 +13,8 @@ public:
 private:
     float omega_mark, omega_space;
     std::function<void(const unsigned int *, unsigned int)> get_digital_samples;
+    float v0i_past = 00.00, v0r_past = 00.00, v1i_past = 00.00, v1r_past = 00.00;
+    float decision_past = 00.00, decision_past_past = 00.00, filtered_decision_past = 00.00, filtered_decision_past_past = 00.00;
 };
 
 class V21_TX
